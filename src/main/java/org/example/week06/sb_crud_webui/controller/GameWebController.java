@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import org.example.week06.sb_crud_webui.dto.GameRequest;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
     @Controller
     public class GameWebController{
@@ -24,6 +27,12 @@ import org.springframework.web.bind.annotation.GetMapping;
         @GetMapping("/games/new")
         public String form() {
             return "games/form";
+        }
+
+        @PostMapping("/games")
+        public String create(@ModelAttribute GameRequest request) {
+            gameService.create(request);
+            return "redirect:/games";
         }
     }
 
