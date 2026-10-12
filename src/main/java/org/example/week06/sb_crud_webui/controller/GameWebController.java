@@ -34,5 +34,10 @@ import org.springframework.web.bind.annotation.PostMapping;
             gameService.create(request);
             return "redirect:/games";
         }
+
+        @GetMapping("/")
+        public String home() {
+            return "redirect:/games";
+        }
     }
 
