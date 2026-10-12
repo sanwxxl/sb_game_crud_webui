@@ -1,0 +1,12 @@
+body {
+    font-family: "Malgun Gothic", sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.table th {
+    white-space: nowrap;
+}
