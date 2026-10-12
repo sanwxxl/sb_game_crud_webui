@@ -20,5 +20,10 @@ import org.springframework.web.bind.annotation.GetMapping;
             model.addAttribute("games", gameService.findAll());
             return "games/list";
         }
+
+        @GetMapping("/games/new")
+        public String form() {
+            return "games/form";
+        }
     }
 
